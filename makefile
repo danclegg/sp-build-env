@@ -5,6 +5,6 @@ UNAME=$(shell echo $(DOCKER_USERNAME))
 PASSW=$(shell echo $(DOCKER_PASSWORD))
 
 all:
-	docker build -t $(ORG)/$(NAME):$(BRANCH) .
+	docker build -t $(NAME):$(BRANCH) .
 	docker login -u $(UNAME) -p $(PASSW)
-	docker push $(ORG)/$(NAME):$(BRANCH)
+	docker push $(NAME):$(BRANCH)
