@@ -8,8 +8,6 @@ RUN apk add nodejs nodejs-npm
 
 RUN npm install -g -U npm
 
-RUN npm install -g -U @angular/cli
-
 WORKDIR /go/src
 
 RUN go get -u github.com/labstack/echo
@@ -24,6 +22,6 @@ RUN rm -fR *
 
 WORKDIR github.com/byu-oit/av-scheduling-ui/web
 
-RUN npm i
+RUN npm install -g -U node-gyp
 
-RUN ng build --aot --prod
+RUN npm install
