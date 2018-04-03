@@ -10,7 +10,9 @@ RUN npm install -g -U npm
 
 WORKDIR /go/src
 
-RUN gvt fetch --branch=master github.com/byu-oit/av-scheduling-ui
+RUN go get -u github.com/labstack/echo
+
+RUN go get -u github.com/labstack/echo/middleware
 
 RUN go get -u github.com/byu-oit/av-scheduling-ui
 
