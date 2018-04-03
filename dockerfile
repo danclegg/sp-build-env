@@ -8,7 +8,7 @@ RUN apk add nodejs nodejs-npm
 
 RUN npm install -g -U npm
 
-RUN npm install -g -U angular-cli
+RUN npm install -g -U @angular/cli
 
 WORKDIR /go/src
 
