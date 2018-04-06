@@ -22,6 +22,4 @@ RUN rm -fR *
 
 WORKDIR github.com/byu-oit/av-scheduling-ui/web
 
-RUN npm install -g -U node-gyp
-
 RUN npm install
